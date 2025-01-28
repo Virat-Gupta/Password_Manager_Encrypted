@@ -3,7 +3,7 @@ from User_Handler import UserHandler
 
 def login_screen() -> int:
     print(r"""
-    ___  _   ___ _____      _____  ___ ___    __  __   _   _  _   _   ___ ___ ___ 
+     ___  _   ___ _____      _____  ___ ___    __  __   _   _  _   _   ___ ___ ___ 
     | _ \/_\ / __/ __\ \    / / _ \| _ \   \  |  \/  | /_\ | \| | /_\ / __| __| _ \
     |  _/ _ \\__ \__ \\ \/\/ / (_) |   / |) | | |\/| |/ _ \| .` |/ _ \ (_ | _||   /
     |_|/_/ \_\___/___/ \_/\_/ \___/|_|_\___/  |_|  |_/_/ \_\_|\_/_/ \_\___|___|_|_\
@@ -20,6 +20,7 @@ def login_screen() -> int:
         login_screen()
 
 def after_login_screen(user: str):
+    print("\n")
     print(f"Welcome {user}")
     print("0. Exit")
     print("1. Add Password")

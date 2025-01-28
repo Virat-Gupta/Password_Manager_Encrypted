@@ -1,3 +1,7 @@
+#user specific files
+users.json
+Passwords/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

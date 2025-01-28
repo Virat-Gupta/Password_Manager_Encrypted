@@ -6,7 +6,11 @@ import base64
 class PasswordManager:
     def __init__(self, user : str, master_password : str):
         self.user = user
-        self.filepath = f"Password_Manager_Encrypted\\Passwords\\{user}_passwords.json"
+
+        if not os.path.exists("Passwords") :
+            os.makedirs("Passwords")
+
+        self.filepath = f"Passwords\\{user}_passwords.json"
 
         salt = base64.b64decode(master_password[:44].encode("utf-8"))
         self.fernet = Fernet(derive_key_scrypt(master_password[44:], salt))

@@ -3,7 +3,7 @@ from Cryptography_functions import derive_key_scrypt, generate_salt
 
 class UserHandler:
     def __init__(self):
-        self.user_filepath = "Password_Manager_Encrypted\\users.json"
+        self.user_filepath = "users.json"
         if not os.path.exists(self.user_filepath) :
             with open(self.user_filepath, 'w') as file:
                 file.write('')
@@ -44,8 +44,8 @@ class UserHandler:
 
         if user in data: 
             del data[user]
-            if os.path.exists(f"Password_Manager_Encrypted\\Passwords\\{user}_passwords.json") :
-                os.remove(f"Password_Manager_Encrypted\\Passwords\\{user}_passwords.json")
+            if os.path.exists(f"Passwords\\{user}_passwords.json") :
+                os.remove(f"Passwords\\{user}_passwords.json")
 
             with open(self.user_filepath, 'w') as f:
                 json.dump(data, f, indent=4)
