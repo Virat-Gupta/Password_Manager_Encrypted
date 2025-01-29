@@ -19,7 +19,7 @@ def login_screen() -> int:
         print("[+] Select Something!")
         login_screen()
 
-def after_login_screen(user: str):
+def after_login_screen(user: str) -> None:
     print("\n")
     print(f"Welcome {user}")
     print("0. Exit")
